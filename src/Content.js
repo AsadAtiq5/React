@@ -1,11 +1,16 @@
 import React from "react";
 
 export const Content = () => {
-  const names = "Asad";
+  const handleName = () => {
+    const name = ["Asad", "Atiq", "Hanzla"];
+    const names = name[Math.floor(Math.random() * name.length)];
+    return names;
+  };
 
   return (
     <main className="mainBody">
-      <p>Hello {names}!</p>
+      <p>Hello {handleName()}!</p>
+      <button onClick={() => handleName}>Change the Name</button>
     </main>
   );
 };
